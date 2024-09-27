@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
+import { signIn } from 'next-auth/react'
 
 export default function  Header() {
   return (
@@ -11,7 +12,7 @@ export default function  Header() {
         <h2 className='font-bold text-xl'>StableGen</h2>
         </Link>
         <div className='__menu'>
-            <Button>
+            <Button onClick={() => signIn("google")}>
                 Login
             </Button>
         </div>
